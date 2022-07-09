@@ -122,16 +122,71 @@ def main():
                 page = 'dolby_atmos'
                 if args.urls[2] == 'tracks':
                     title = 'Tracks'
-                elif args.urls[2] == 'albums':
+                elif args.urls[2] == 'newalbums':
                     title = 'New Albums'
+                elif args.urls[2] == 'justreleased':
+                    title = 'Just Released'
+                elif args.urls[2] == 'rock':
+                    title = 'Rock Albums'
+                elif args.urls[2] == 'jazz':
+                    title = 'Jazz Albums'
+                elif args.urls[2] == 'classical':
+                    title = 'Classical Albums'
+                elif args.urls[2] == 'hiphop':
+                    title = 'Hip-Hop Albums'
+                elif args.urls[2] == 'pop':
+                    title = 'Pop Albums'
+                elif args.urls[2] == 'rnb':
+                    title = 'R&B / Soul Albums'
+                elif args.urls[2] == 'country':
+                    title = 'Country Albums'
+                elif args.urls[2] == 'latin':
+                    title = 'Latin Albums'
+                elif args.urls[2] == 'kpop':
+                    title = 'K-Pop Albums'
+                elif args.urls[2] == 'electronic':
+                    title = 'Electronic Albums'
+                elif args.urls[2] == 'holiday':
+                    title = 'Holiday Albums'
+                elif args.urls[2] == 'playlists':
+                    title = 'Playlists'
+                elif args.urls[2] == 'decades':
+                    title = 'Decades'
+                elif args.urls[2] == 'essentials':
+                    title = 'Essentials'
+                elif args.urls[2] == 'classics':
+                    title = 'Classics'
+                elif args.urls[2] == 'labels':
+                    title = 'Label Playlists'
             elif args.urls[1] == '360':
                 page = '360'
                 if args.urls[2] == 'tracks':
                     title = 'New Tracks'
                 elif args.urls[2] == 'albums':
                     title = 'Now Available'
+                elif args.urls[2] == 'playlists':
+                    title = 'Playlists'
+                elif args.urls[2] == 'decades':
+                    title = 'Decades'
+                elif args.urls[2] == 'classics':
+                    title = 'Classics'
+                elif args.urls[2] == 'essentials':
+                    title = 'Essentials Playlists'
+                elif args.urls[2] == 'rnb':
+                    title = 'R&B / Soul Albums'
+                elif args.urls[2] == 'pop':
+                    title = 'Pop Albums'
+                elif args.urls[2] == 'rock':
+                    title = 'Rock Albums'
+                elif args.urls[2] == 'classical':
+                    title = 'Classical Albums'
+                elif args.urls[2] == 'hiphop':
+                    title = 'Hip-Hop Albums'
+                elif args.urls[2] == 'latin':
+                    title = 'Latin Albums'
         except IndexError:
-            print("Example usage of explore: python redsea.py explore (atmos|360) (albums|tracks)")
+            print("Example usage of Dolby Atmos explore: python redsea.py explore atmos (newalbums|tracks|justreleased|rock|jazz|classical|hiphop|pop|rnb|country|latin|kpop|electronic|holiday|playlists|decades|essentials|classics|labels)")
+            print("Example usage of Sony 360RA explore: python redsea.py explore 360 (albums|tracks|playlists|decades|classics|essentials|rnb|pop|rock|classical|hiphop|latin)")
             exit()
 
         print(f'Selected: {page.replace("_", " ").title()} - {title}')
