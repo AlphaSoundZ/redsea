@@ -1,9 +1,12 @@
 RedSea
 ======
-Music downloader and tagger for Tidal. For educational use only, and will break in the future.
+Music downloader and tagger for Tidal. For educational use only, and will break in the future. -updated by burntscarr
 
 Current state
 -------------
+**This is a fork of the below information. Dniel97 is the original updater for this program, but not the original developer. I, burntscarr am making changes to the code he already updated to add even more features and fix some functionality. Links to the Wiki and such will still redirect to Dniel97's GitHub page for now.**
+
+(Original Message from Dniel97)
 **This fork will only get bug/hotfixes by me ([Dniel97](https://github.com/Dniel97)). Currently, Tidal changes/removes old
 tokens which supported single .flac/.m4a files and the newer tokens only receives MPEG-DASH which would require a lot of
 rewrite! For now is deprecated in favor of a newer [OrpheusDL](https://github.com/yarrm80s/orpheusdl) module: 
@@ -14,6 +17,8 @@ Telegram
 Join the telegram group [RedSea Community](https://t.me/RedSea_Community) if you have questions, want to get help,
 submit bugs or want to talk to the developer.
 
+[burntscarr is on Telegram](https://t.me/burntscarr) as well!
+
 Introduction
 ------------
 RedSea is a music downloader and tagger for the Tidal music streaming service. It is designed partially as a Tidal API example. This repository also hosts a wildly incomplete Python Tidal
@@ -21,8 +26,8 @@ API implementation - it is contained in `redsea/tidal_api.py` and only requires 
 
 Choosing login types and client IDs
 -----------------------------------
-* To get the E-AC-3 codec version of Dolby Atmos Music, the TV sign in must be used with the client ID and secret of one of the supported Android TVs (full list below) (now included)
-* To get the AC-4 codec version of Dolby Atmos Music, the Mobile sign in must be used with the client ID of one of the supported phones (default mobile works)
+* To get the E-AC-3 codec version of Dolby Atmos Music, the **TV** sign in must be used with the client ID and secret of one of the supported Android TVs (full list below) (now included)
+* To get the AC-4 codec version of Dolby Atmos Music (which is not useful at all), the Mobile sign in must be used with the client ID of one of the supported phones (default mobile works)
 * To get MQA, use literally anything that is not the browser, nearly all client IDs work. (In this case change the client ID of the desktop login) (bring your own anything (TV, mobile, desktop))
 * To get ALAC without conversion, use the client ID of an iOS device, or the optional desktop token included from macOS (comment out the default FLAC supporting one, and uncomment the ALAC one) (secondary desktop works, or bring your own mobile)
 * To get 360, use the client ID of a supported Android or iOS device (nearly all support it anyway, so that's easy) (default mobile works)
@@ -129,6 +134,8 @@ Usage:      `python redsea.py explore (atmos|360) (albums|tracks)`
 Example:    `python redsea.py explore atmos tracks`
 
 Example:    `python redsea.py explore 360 albums`
+
+(This is being worked on and you can list the possibilities within the RedSea program)
 
 Lyrics Support
 --------------
