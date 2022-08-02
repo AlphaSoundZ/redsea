@@ -28,6 +28,7 @@ LOGO = """
 
                     (c) 2016 Joe Thatcher
                https://github.com/svbnet/RedSea
+             https://github.com/burntscarr/RedSea
 \n"""
 
 MEDIA_TYPES = {'t': 'track', 'p': 'playlist', 'a': 'album', 'r': 'artist', 'v': 'video'}
