@@ -17,18 +17,17 @@ from config.settings import PRESETS, BRUTEFORCEREGION
 
 
 LOGO = """
- /$$$$$$$                  /$$  /$$$$$$
-| $$__  $$                | $$ /$$__  $$
-| $$  \ $$  /$$$$$$   /$$$$$$$| $$  \__/  /$$$$$$   /$$$$$$
-| $$$$$$$/ /$$__  $$ /$$__  $$|  $$$$$$  /$$__  $$ |____  $$
-| $$__  $$| $$$$$$$$| $$  | $$ \____  $$| $$$$$$$$  /$$$$$$$
-| $$  \ $$| $$_____/| $$  | $$ /$$  \ $$| $$_____/ /$$__  $$
-| $$  | $$|  $$$$$$$|  $$$$$$$|  $$$$$$/|  $$$$$$$|  $$$$$$$
-|__/  |__/ \_______/ \_______/ \______/  \_______/ \_______/
 
-                    (c) 2016 Joe Thatcher
-               https://github.com/svbnet/RedSea
-             https://github.com/burntscarr/RedSea
+'||''|.                '||   .|'''.|                  
+ ||   ||    ....     .. ||   ||..  '    ....   ....   
+ ||''|'   .|...||  .'  '||    ''|||.  .|...|| '' .||  
+ ||   |.  ||       |.   ||  .     '|| ||      .|' ||  
+.||.  '|'  '|...'  '|..'||. |'....|'   '|...' '|..'|' 
+
+                 (c) 2016 Joe Thatcher
+              (Revamped 2022 by burntscarr)
+            https://github.com/svbnet/RedSea
+          https://github.com/burntscarr/RedSea
 \n"""
 
 MEDIA_TYPES = {'t': 'track', 'p': 'playlist', 'a': 'album', 'r': 'artist', 'v': 'video'}
