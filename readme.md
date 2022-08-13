@@ -129,14 +129,12 @@ Example:    `python redsea.py id id 92265335`
 
 Exploring new Dolby Atmos or 360 Reality Audio releases is now supported
 
-Usage:      `python redsea.py explore (atmos|360) (albums|tracks)`
-(There is an update to this, I'll write about it soon.)
+Usage:      `python redsea.py explore (atmos|360) (explore section title)`
 
-Example:    `python redsea.py explore atmos tracks`
+Example usage of Dolby Atmos explore: `python redsea.py explore atmos (newalbums|tracks|justreleased|rock|jazz|classical|hiphop|pop|rnb|country|latin|kpop|electronic|holiday|)`
 
-Example:    `python redsea.py explore 360 albums`
+Example usage of Sony 360RA explore: `python redsea.py explore 360 (albums|tracks|rnb|pop|rock|classical|hiphop|latin)`
 
-(This is being worked on and you can list the possibilities within the RedSea program)
 
 Lyrics Support
 --------------
