@@ -1,10 +1,10 @@
-RedSea
+redsea
 ======
 Music downloader and tagger for Tidal. For educational use only, and will break in the future. -updated by burntscarr
 
 Current state
 -------------
-**This is a fork of the below information. Dniel97 is the original updater for this program, but not the original developer. I, burntscarr am making changes to the code he already updated to add even more features and fix some functionality. Links to the Wiki and such will still redirect to Dniel97's GitHub page for now.**
+**This is a fork of the below information. Dniel97 is the original updater for this program, but not the original developer. I, burntscarr am making changes to the code he already updated to add even more features and fix some functionality.**
 
 (Original Message from Dniel97)
 **This fork will only get bug/hotfixes by me ([Dniel97](https://github.com/Dniel97)). Currently, Tidal changes/removes old
@@ -38,7 +38,7 @@ Client IDs provided by default:
 * Desktop: Neither of the included ones support MQA! You must replace it with your own if you want MQA support! Default token can get FLACs only, whereas the optional one can get ALACs only (both are also able to get AAC)
 * Browser: Is completely unsupported for now, though why would you want it anyway?
 
-Further Reading has moved to the wiki: [https://github.com/Dniel97/RedSea/wiki/Technical-info](https://github.com/Dniel97/RedSea/wiki/Technical-info)
+Further Reading has moved to the wiki: [https://github.com/burntscarr/redsea/wiki/Technical-Info](https://github.com/burntscarr/redsea/wiki/Technical-Info)
 
 Requirements
 ------------
@@ -54,7 +54,7 @@ Requirements
 
 Installation
 ------------
-The new more detailed Installation Guide has been moved to the wiki: [https://github.com/Dniel97/RedSea/wiki/Installation-Guide](https://github.com/Dniel97/RedSea/wiki/Installation-Guide)
+The new more detailed Installation Guide has been moved to the wiki: [https://github.com/burntscarr/redsea/wiki/Installation-Guide](https://github.com/burntscar/redsea/wiki/Installation-Guide)
 
 How to add accounts/sessions
 ----------------------------
@@ -83,7 +83,7 @@ How to add accounts/sessions
 
     reauth              Reauthenticates with server to get new sessionId
 
-Further reading on which session to choose and which prompts to choose in the wiki: [https://github.com/Dniel97/RedSea/wiki/Adding-a-session](https://github.com/Dniel97/RedSea/wiki/Adding-a-session)
+Further reading on which session to choose and which prompts to choose in the wiki: [https://github.com/burntscarr/redsea/wiki/Adding-a-Session](https://github.com/burntscarr/redsea/wiki/Adding-a-Session)
 
 How to use
 ----------
@@ -130,6 +130,7 @@ Example:    `python redsea.py id id 92265335`
 Exploring new Dolby Atmos or 360 Reality Audio releases is now supported
 
 Usage:      `python redsea.py explore (atmos|360) (albums|tracks)`
+(There is an update to this, I'll write about it soon.)
 
 Example:    `python redsea.py explore atmos tracks`
 
