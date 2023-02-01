@@ -148,6 +148,24 @@ def main():
                     title = 'Electronic Albums'
                 elif args.urls[2] == 'holiday':
                     title = 'Holiday Albums'
+                elif args.urls[2] == 'rihanna':
+                    title = 'Rihanna Releases Now in Dolby Atmos'
+                elif args.urls[2] == 'beatles':
+                    title = 'The Beatles: Together and Solo'
+                elif args.urls[2] == 'guestverses':
+                    title = 'Guest Verses'
+                elif args.urls[2] == 'decades':
+                    title = 'Decades'
+                elif args.urls[2] == 'essentials':
+                    title = 'Essentials'
+                elif args.urls[2] == 'classics':
+                    title = 'Classics'
+                elif args.urls[2] == 'labels':
+                    title = 'Label Playlists'
+                elif args.urls[2] == 'ost':
+                    title = 'Soundtracks & Scores'
+                elif args.urls[2] == 'xmas':
+                    title = 'Christmas Playlists'
             elif args.urls[1] == '360':
                 page = '360'
                 if args.urls[2] == 'tracks':
