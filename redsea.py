@@ -232,8 +232,7 @@ def main():
 
             date = " (" + item['streamStartDate'].split('T')[0] + ")"
 
-            print(str(i + 1) + ") " + str(item['title']) + " - " + str(
-                item['artists'][0]['name']) + explicittag + specialtag + date)
+            print(str(i + 1) + ") " + str(item['artists'][0]['name'])+ " - " + str(item['title']) + explicittag + specialtag + date)
 
         print(str(total_items + 1) + ") Download all items listed above")
         print(str(total_items + 2) + ") Exit")
