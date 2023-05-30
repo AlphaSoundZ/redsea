@@ -232,16 +232,20 @@ def main():
 
             date = " (" + item['streamStartDate'].split('T')[0] + ")"
 
-            print(str(i + 1) + ") " + str(item['artists'][0]['name'])+ " - " + str(item['title']) + explicittag + specialtag + date)
+            print(str(i + 1) + ") " + str(item['title']) + " - " + str(
+                item['artists'][0]['name']) + explicittag + specialtag + date)
 
         print(str(total_items + 1) + ") Download all items listed above")
         print(str(total_items + 2) + ") Exit")
 
         while True:
-            chosen = int(input("Selection: ")) - 1
+            choices = input("Selection (separate multiple numbers with spaces): ")
+            choices = choices.split()
+            chosen = [int(choice) - 1 for choice in choices]
+
             if chosen == total_items + 1:
                 exit()
-            elif chosen > total_items + 1 or chosen < 0:
+            elif any(num > total_items + 1 or num < 0 for num in chosen):
                 print("Enter an existing number")
             else:
                 break
@@ -252,7 +256,7 @@ def main():
             print('Downloading all albums')
             media_to_download = [{'id': str(item['id']), 'type': 'a' if 'album' in item['url'] else 't'} for item in items]
         else:
-            media_to_download = [{'id': str(items[chosen]['id']), 'type': 'a' if 'album' in items[chosen]['url'] else 't'}]
+            media_to_download = [{'id': str(items[choice]['id']), 'type': 'a' if 'album' in items[choice]['url'] else 't'} for choice in chosen]
 
     elif args.urls[0] == 'search':
         md = MediaDownloader(TidalApi(RSF.load_session(args.account)), preset, Tagger(preset))
