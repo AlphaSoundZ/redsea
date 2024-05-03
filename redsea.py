@@ -18,16 +18,21 @@ from config.settings import PRESETS, BRUTEFORCEREGION
 
 LOGO = """
 
-'||''|.                '||   .|'''.|                  
- ||   ||    ....     .. ||   ||..  '    ....   ....   
- ||''|'   .|...||  .'  '||    ''|||.  .|...|| '' .||  
- ||   |.  ||       |.   ||  .     '|| ||      .|' ||  
-.||.  '|'  '|...'  '|..'||. |'....|'   '|...' '|..'|' 
+                         .o8
+                        "888
+oooo d8b  .ooooo.   .oooo888   .oooo.o  .ooooo.   .oooo.
+`888""8P d88' `88b d88' `888  d88(  "8 d88' `88b `P  )88b
+ 888     888ooo888 888   888  `"Y88b.  888ooo888  .oP"888
+ 888     888    .o 888   888  o.  )88b 888    .o d8(  888
+d888b    `Y8bod8P' `Y8bod88P" 8""888P' `Y8bod8P' `Y888""8o
 
-             (c) 2016 Joe Thatcher
-          (Revamped 2022 by burntscarr)
-        https://github.com/svbnet/RedSea
-      https://github.com/burntscarr/RedSea
+                 (c) 2016 Joe Thatcher
+            https://github.com/svbnet/RedSea
+
+             (Revamped 2022 by burntscarr)
+
+              (Latest Update May 03 2024)
+          https://github.com/burntscarr/redsea
 \n"""
 
 MEDIA_TYPES = {'t': 'track', 'p': 'playlist', 'a': 'album', 'r': 'artist', 'v': 'video'}
@@ -154,6 +159,8 @@ def main():
                     title = 'The Beatles: Together and Solo'
                 elif args.urls[2] == 'guestverses':
                     title = 'Guest Verses'
+                elif args.urls[2] == 'alternate':
+                    title = 'Alternate Albums'
                 elif args.urls[2] == 'decades':
                     title = 'Decades'
                 elif args.urls[2] == 'essentials':
@@ -165,7 +172,7 @@ def main():
                 elif args.urls[2] == 'ost':
                     title = 'Soundtracks & Scores'
                 elif args.urls[2] == 'xmas':
-                    title = 'Christmas Playlists'
+                    title = 'Christmas Albums'
             elif args.urls[1] == '360':
                 page = '360'
                 if args.urls[2] == 'tracks':
@@ -184,9 +191,15 @@ def main():
                     title = 'Hip-Hop Albums'
                 elif args.urls[2] == 'latin':
                     title = 'Latin Albums'
+                elif args.urls[2] == 'pinkfloyd':
+                    title = 'Pink Floyd: Together and Solo'
+                elif args.urls[2] == 'xmas':
+                    title = 'Christmas Albums'
         except IndexError:
-            print("Example usage of Dolby Atmos explore: python redsea.py explore atmos (newalbums|tracks|justreleased|rock|jazz|classical|hiphop|pop|rnb|country|latin|kpop|electronic|holiday|)")
-            print("Example usage of Sony 360RA explore: python redsea.py explore 360 (albums|tracks|rnb|pop|rock|classical|hiphop|latin)")
+            print("Example usage of Dolby Atmos explore:")
+            print(" python redsea.py explore atmos (newalbums|tracks|justreleased|rock|jazz|classical|hiphop|pop|rnb|country|latin|kpop|electronic|holiday|rihanna|beatles|alternate|ost|xmas)")
+            print("Example usage of Sony 360RA explore:")
+            print("python redsea.py explore 360 (albums|tracks|rnb|pop|rock|classical|hiphop|latin|pinkfloyd|xmas)")
             exit()
 
         print(f'Selected: {page.replace("_", " ").title()} - {title}')
@@ -232,8 +245,7 @@ def main():
 
             date = " (" + item['streamStartDate'].split('T')[0] + ")"
 
-            print(str(i + 1) + ") " + str(item['title']) + " - " + str(
-                item['artists'][0]['name']) + explicittag + specialtag + date)
+            print(str(i + 1) + ") " + str(item['artists'][0]['name']) + " - " + str(item['title']) + explicittag + specialtag + date)
 
         print(str(total_items + 1) + ") Download all items listed above")
         print(str(total_items + 2) + ") Exit")
@@ -297,8 +309,8 @@ def main():
                 else:
                     explicittag = ""
 
-                print(str(i + 1) + ") " + str(song['title']) + " - " + str(
-                    song['artists'][0]['name']) + explicittag + specialtag)
+                print(str(i + 1) + ") " + str(song['artists'][0]['name']) +
+                    " - " + str(song['title'])  + explicittag + specialtag)
 
             query = None
 
@@ -523,7 +535,7 @@ def main():
                 name = md.playlist_from_id(mt['id'])['title']
             else:
                 name = track_info[0][1]['title']
-                
+
             print('<<< Downloading {0} "{1}": {2} track(s) in total >>>'.format(
                 MEDIA_TYPES[mt['type']] + (' ' + media_name if media_name else ''), name, total))
 
