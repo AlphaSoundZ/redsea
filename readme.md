@@ -12,13 +12,6 @@ tokens which supported single .flac/.m4a files and the newer tokens only receive
 rewrite! For now is deprecated in favor of a newer [OrpheusDL](https://github.com/yarrm80s/orpheusdl) module: 
 [Orpheus Tidal module](https://github.com/Dniel97/orpheusdl-tidal).**
 
-Telegram
---------
-Join the telegram group [RedSea Community](https://t.me/RedSea_Community) if you have questions, want to get help,
-submit bugs or want to talk to the developer.
-
-[burntscarr is on Telegram](https://t.me/burntscarr) as well!
-
 Introduction
 ------------
 RedSea is a music downloader and tagger for the Tidal music streaming service. It is designed partially as a Tidal API example. This repository also hosts a wildly incomplete Python Tidal
