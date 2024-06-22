@@ -31,7 +31,7 @@ d888b    `Y8bod8P' `Y8bod88P" 8""888P' `Y8bod8P' `Y888""8o
 
              (Revamped 2022 by burntscarr)
 
-              (Latest Update May 03 2024)
+              (Latest Update June 22 2024)
           https://github.com/burntscarr/redsea
 \n"""
 
@@ -255,16 +255,14 @@ def main():
             choices = choices.split()
             chosen = [int(choice) - 1 for choice in choices]
 
-            if chosen == total_items + 1:
-                exit()
-            elif any(num > total_items + 1 or num < 0 for num in chosen):
+            if any(num > total_items or num < 0 for num in chosen):
                 print("Enter an existing number")
             else:
                 break
             print()
 
-        # if 'album' in item['url'] is a really ugly way but well should be fine for now
-        if chosen == total_items:
+        # Correct handling for "Download all items"
+        if total_items in chosen:
             print('Downloading all albums')
             media_to_download = [{'id': str(item['id']), 'type': 'a' if 'album' in item['url'] else 't'} for item in items]
         else:
