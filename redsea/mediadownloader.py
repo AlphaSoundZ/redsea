@@ -463,6 +463,23 @@ class MediaDownloader(object):
                         os.remove(temp_file)
                         temp_file = conv_file
                         ftype = "m4a"
+                # Converting to FLAC
+                if self.opts['convert_to_flac'] and ftype != 'flac':
+                    print(f"\tConverting {ftype} to FLAC...")
+                    conv_file = re.sub(r'\.[^\.]+$', '.flac', temp_file)
+                    (
+                        ffmpeg
+                            .input(temp_file)
+                            .output(conv_file, acodec='flac', compression_level=8, loglevel='warning')
+                            .overwrite_output()
+                            .run()
+                    )
+
+                    if path.isfile(conv_file):
+                        print("\tConversion successful")
+                        os.remove(temp_file)
+                        temp_file = conv_file
+                        ftype = "flac"
 
                 # Get credits from album id
                 print('\tSaving credits to file')
